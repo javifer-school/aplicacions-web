@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contenido {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.no_acceso {
+    background-color: #f8d7da;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #dc3545;
+    color: #721c24;
+}
+.producto {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.link {
+    margin-top: 20px;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+form {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.form-group {
+    margin: 15px 0;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+select {
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #218838;
+}
