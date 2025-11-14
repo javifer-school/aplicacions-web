@@ -31,18 +31,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['precio'])) {
     if ($codigo_descuento !== '' && $visitas >= 5 && !isset($_COOKIE['compra_realizada'])) {
         if ($codigo_descuento == 'BOTIGA50' && $visitas >= 10) {
             $precio = $precio - $precio * 0.5;
-        } else if ($codigo_descuento == 'BOTIGA20' && $visitas >= 5) {
+        } elseif ($codigo_descuento == 'BOTIGA20' && $visitas >= 5) {
             $precio = $precio - $precio * 0.2;
         } else {
             $mensaje_error = "Código de descuento inválido";
         }
-    } else if ($codigo_descuento !== '') {
+    } elseif ($codigo_descuento !== '') {
         $mensaje_error = "Código de descuento inválido";
     }
     if ($precio > 0 && !$mensaje_error) {
         setcookie('compra_realizada', 1, time() + (365 * 24 * 60 * 60));
         $mensaje_compra = "Compra realizada! Total: $precio €";
-    } else if (!$mensaje_error) {
+    } elseif (!$mensaje_error) {
         $mensaje_error = "El precio debe ser mayor a 0";
     }
 }
