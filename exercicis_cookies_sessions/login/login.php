@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$error = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuario = $_POST['usuario'] ?? '';
     $password = $_POST['password'] ?? '';
@@ -8,11 +10,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validar que usuario y contraseña coincidan
     if ($usuario === $password && !empty($usuario)) {
         $_SESSION['usuario'] = $usuario;
-        header('Location: pagina1.php');
+        header('Location: ../index.html');
         exit();
     } else {
-        header('Location: index.html?error=1');
-        exit();
+        $error = 'Usuari o contrasenya incorrectes.';
     }
 }
+
+// Mostrar el formulario
 ?>
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <?php if ($error): ?>
+            <div class="error"><?php echo htmlspecialchars($error); ?></div>
+        <?php endif; ?>
+        <form action="login.php" method="POST">
+            <div class="form-group">
+                <label for="usuario">Usuari:</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contrasenya:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+</body>
+</html>

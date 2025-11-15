@@ -19,15 +19,20 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+
 h1 {
     margin-bottom: 20px;
     color: #333;
     text-align: center;
 }
 
-p {
-    margin-bottom: 20px;
-    color: #666;
+.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 12px;
+    border-radius: 3px;
+    margin-bottom: 15px;
 }
 
 .form-group {
@@ -71,32 +76,4 @@ button {
 
 button:hover {
     background-color: #45a049;
-}
-
-nav {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-nav a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.error {
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    color: #721c24;
-    padding: 12px;
-    border-radius: 3px;
-    margin-bottom: 15px;
 }
