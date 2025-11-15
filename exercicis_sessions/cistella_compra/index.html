@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botiga</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Botiga</h1>
+        
+        <div class="products">
+            <form action="cistella_compra.php" method="POST">
+                <div class="product">
+                    <h2>Producte 1</h2>
+                    <p class="price">10€</p>
+                    <div class="form-group">
+                        <label for="quantitat1">Quantitat:</label>
+                        <input type="number" id="quantitat1" name="quantitat1" value="0" min="0">
+                    </div>
+                    <button type="submit" name="action" value="afegir_1">Afegir a la cistella</button>
+                </div>
+
+                <div class="product">
+                    <h2>Producte 2</h2>
+                    <p class="price">20€</p>
+                    <div class="form-group">
+                        <label for="quantitat2">Quantitat:</label>
+                        <input type="number" id="quantitat2" name="quantitat2" value="0" min="0">
+                    </div>
+                    <button type="submit" name="action" value="afegir_2">Afegir a la cistella</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="actions">
+            <a href="cistella_compra.php?view=cistella" class="btn btn-primary">Veure cistella</a>
+        </div>
+    </div>
+</body>
+</html>
